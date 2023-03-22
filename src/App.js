@@ -27,10 +27,10 @@ function App() {
 
 
   return (
-    <>
+    <main className="section__main">
       <List activities={goodWeatherActivity} isGoodWeather={isGoodWeather} />
       <Form onAddActivity={handleAddActivity} />
-    </>
+    </main>
   );
 }
 
