@@ -44,9 +44,9 @@ function App() {
       setWeather(data.isGoodWeather);
       setEmoji(data.condition);
       setTemp(data.temperature);
-
-      console.log(data);
-    } catch (error) {}
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
