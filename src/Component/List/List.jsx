@@ -4,8 +4,8 @@ export const List = ({ onDeleteActivity, activities, isGoodWeather, emoji, temp 
   return (
     <div className="listSection">
       <div className="listSection__weatherDisplay">
-        <h2>{emoji}</h2>
-        <h2>{temp}</h2>
+        <h2 className="listSection__item listSection__emoji">{emoji}</h2>
+        <h2 className="listSection__item listSection__temp">{temp}°c</h2>
       </div>
     
 
