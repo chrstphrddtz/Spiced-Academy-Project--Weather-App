@@ -19,14 +19,13 @@ function App() {
     setActivities([...activities, { id: uid(), ...newActivity }]);
   }
 
-  //const isGoodWeather = false;
 
   const goodWeatherActivity = activities.filter((activity) => {
     return weather ? activity.isForGoodWeather : !activity.isForGoodWeather;
   });
 
   useEffect(() => {
-    const interval = setInterval(loadWeather, 3000);
+    const interval = setInterval(loadWeather, 5000);
     loadWeather();
     return () => clearInterval(interval);
   }, [weather]);
