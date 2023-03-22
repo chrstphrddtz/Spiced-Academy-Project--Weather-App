@@ -44,15 +44,25 @@
   font-weight: 500;
   border: 1px solid black;
   border-radius: 10px;
+  min-height: 65px;
   padding: 10px;
   margin: 5px;
+}
+
+.listSection__listItem:hover {
+  box-shadow: 1px 1px 5px;
 }
 
 /* Delete Button */
 
 .listSection__listButton {
   margin: 10px;
+  font-size: 1.5rem;
   background-color: inherit;
   border: none;
-  align-items: center;
+  text-align: center;
+}
+
+.listSection__listButton:hover {
+  font-size: 1.8rem;
 }
