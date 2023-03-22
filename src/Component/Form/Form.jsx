@@ -19,17 +19,16 @@ export function Form( { onAddActivity } ) {
   }
 
   return (
-    <div>
+    <div className="section__form">
       <form onSubmit={handleSubmitEvent} className="form">
           <h2>Add new Activity</h2>
-          <label htmlFor="name">Name:</label>
-          <input name="name" id="name" type="text" />
+          <label htmlFor="name" className="form__label">Name:</label>
+          <input name="name" id="name" type="text" className="form__input"/>
 
-          <label htmlFor="goodWeather">Good-weather Activity:</label>
-          <input type="checkbox" name="goodWeather" id="goodWeather" />
+          <label htmlFor="goodWeather" className="form__label">Good-weather Activity:</label>
+          <input type="checkbox" name="goodWeather" id="goodWeather" className="form__input"/>
 
-          <button type="submit">Submit</button>
-
+          <button type="submit" className="form__button">Submit</button>
       </form>
     </div>
   )
