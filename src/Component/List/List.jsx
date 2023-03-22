@@ -1,6 +1,6 @@
 import "./List.css";
 
-export const List = ({ activities, isGoodWeather, emoji, temp }) => {
+export const List = ({ onDeleteActivity, activities, isGoodWeather, emoji, temp }) => {
   return (
     <div className="listSection">
       <div className="listSection__weatherDisplay">
@@ -19,6 +19,7 @@ export const List = ({ activities, isGoodWeather, emoji, temp }) => {
           return (
             <li className="listSection__listItem" key={activity.id}>
               {activity.name}
+              <button onClick={onDeleteActivity} className="listSection__listButton">❌</button>
             </li>
           );
         })}
