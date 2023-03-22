@@ -1,5 +1,10 @@
 /* Form Stylings */
 
+.formSection {
+  width: 70%;
+  margin: auto;
+}
+
 .formSection__form {
     display: flex;
     flex-direction: column;
@@ -11,7 +16,13 @@
     box-shadow: 2px 2px 6px;
 }
 
+.formSection__title {
+  font-size: 1.5rem;
+}
+
 .formSection__formButton {
+    font-size: 1.5rem;
+    font-weight: 400;
     margin: 10px;
     border-radius: 5px;
     height: 40px;
@@ -21,69 +32,46 @@
 .formSection__formInput {
     margin-left: 10px;
     border-radius: 5px;
+    padding: 5px;
+    background-color: cornsilk;
 }
 
 .weather__input {
     align-self: left;
+  
 }
 
 button:hover {
     background-color: darkseagreen;
     color: var(--black-color);
     box-shadow: 2px 2px 6px;
-    /* transform: scale(1.08); */
 }
 
 .formSection__formLabel {
     text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
-
 
 .weather__input,
 .name__input {
+  
     display: flex;
+    align-items: center;
     gap: 25px;
-    /* justify-content: space-between; */
 }
 
 input[type="checkbox"] {
-
-
     appearance: none;
-    background-color: #fff;
+    background-color: cornsilk;    
     margin: 0;
-    font: inherit;
     color: currentColor;
     width: 1.15em;
     height: 1.15em;
     border: 0.15em solid currentColor;
     border-radius: 0.15em;
     transform: translateY(-0.075em);
-
     display: grid;
-    place-content: center;
-
-}
-
-input[type="checkbox"] {
-    /* Add if not using autoprefixer */
-    -webkit-appearance: none;
-    /* Remove most all native input styles */
-    appearance: none;
-    /* For iOS < 15 */
-    background-color: var(--form-background);
-    /* Not removed via appearance */
-    margin: 0;
-
-    font: inherit;
-    color: currentColor;
-    width: 1.15em;
-    height: 1.15em;
-    border: 0.15em solid currentColor;
-    border-radius: 0.15em;
-    /* transform: translateY(-0.075em); */
-
-    /* display: grid; */
     place-content: center;
 }
 
@@ -111,7 +99,6 @@ input[type="checkbox"]:focus {
 
 input[type="checkbox"]:disabled {
     --form-control-color: var(--form-control-disabled);
-
     color: var(--form-control-disabled);
     cursor: not-allowed;
 }
