@@ -1,6 +1,6 @@
 import { Form } from "./Component/Form/Form";
 import { List } from "./Component/List/List";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { uid } from "uid";
 import useLocalStorageState from "use-local-storage-state";
 
@@ -15,11 +15,22 @@ function App() {
     setActivities([...activities, { id: uid(), ...newActivity }]);
   }
 
+  const isGoodWeather = false
+
+  const goodWeatherActivity = activities.filter((activity) => {
+    return isGoodWeather ? activity.isForGoodWeather : !activity.isForGoodWeather
+  })
+
+
+  console.log(activities);
+
+
+
   return (
-    <>
-      <List activities={activities} />
+    <main className="section__main">
+      <List activities={goodWeatherActivity} isGoodWeather={isGoodWeather} />
       <Form onAddActivity={handleAddActivity} />
-    </>
+    </main>
   );
 }
 
