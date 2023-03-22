@@ -1,20 +1,23 @@
 import { Form } from './Component/Form/Form';
 
-// import { useState } from 'react';
+import { useState } from 'react';
 
 import './App.css';
 
 function App() {
 
-  // const [addActivity, setAddActivity] = useState()
+  const [activities, setActivities] = useState({})
 
-  function onConsoleLog() {
-    console.log("Test");
+  function handleAddActivity(newActivity) {
+    setActivities(...activities, newActivity)
+
   }
+
+
   
   return (
     <>
-    <Form onAddActivity={onConsoleLog} />
+    <Form onAddActivity={handleAddActivity} />
     </>
   )
   
