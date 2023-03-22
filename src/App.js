@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(loadWeather, 3000);
-    //loadWeather();
+    loadWeather();
     return () => clearInterval(interval);
   }, [weather]);
 
