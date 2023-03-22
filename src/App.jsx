@@ -19,6 +19,11 @@ function App() {
     setActivities([...activities, { id: uid(), ...newActivity }]);
   }
 
+  function handleDeleteActivity(id) {
+    setActivities(activities.filter((activity) => activity.id !== id))
+    console.log("delete: ", id);
+  }
+
 
   const goodWeatherActivity = activities.filter((activity) => {
     return weather ? activity.isForGoodWeather : !activity.isForGoodWeather;
@@ -49,6 +54,7 @@ function App() {
       <h1 className="mainSection__title">Good or Bad Weather Activity</h1>
       <List
         activities={goodWeatherActivity}
+        onDeleteActivity={handleDeleteActivity}
         isGoodWeather={weather}
         emoji={emoji}
         temp={temp}

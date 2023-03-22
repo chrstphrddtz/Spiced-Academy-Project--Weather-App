@@ -19,7 +19,7 @@ export const List = ({ onDeleteActivity, activities, isGoodWeather, emoji, temp 
           return (
             <li className="listSection__listItem" key={activity.id}>
               {activity.name}
-              <button onClick={onDeleteActivity} className="listSection__listButton">❌</button>
+              <button onClick={()=> onDeleteActivity?.(activity.id)} className="listSection__listButton">❌</button>
             </li>
           );
         })}
