@@ -45,7 +45,8 @@ function App() {
   }
 
   return (
-    <main className="section__main">
+    <main className="mainSection">
+      <h1 className="mainSection__title">Good or Bad Weather Activity</h1>
       <List
         activities={goodWeatherActivity}
         isGoodWeather={weather}
