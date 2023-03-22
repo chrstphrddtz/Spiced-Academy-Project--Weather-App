@@ -1,2 +1,68 @@
 /* List Stylings */
 
+.listSection {
+  margin-bottom: 100px;
+  width: 70%;
+}
+
+/* Weather Display */
+.listSection__weatherDisplay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.listSection__item {
+  font-size: 4rem;
+}
+
+/* List Title */
+
+.listSection__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* List Items */
+
+.listSection__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  width: 90%;
+}
+
+.listSection__listItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-height: 65px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.listSection__listItem:hover {
+  box-shadow: 1px 1px 5px;
+}
+
+/* Delete Button */
+
+.listSection__listButton {
+  margin: 10px;
+  font-size: 1.5rem;
+  background-color: inherit;
+  border: none;
+  text-align: center;
+}
+
+.listSection__listButton:hover {
+  font-size: 1.8rem;
+}
