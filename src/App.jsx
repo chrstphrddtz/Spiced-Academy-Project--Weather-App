@@ -29,24 +29,25 @@ function App() {
   });
 
   useEffect(() => {
+    async function loadWeather() {
+      try {
+        const response = await fetch(
+          `https://example-apis.vercel.app/api/weather/arctic`
+        );
+        const data = await response.json();
+        setWeather(data.isGoodWeather);
+        setEmoji(data.condition);
+        setTemp(data.temperature);
+      } catch (error) {
+        console.error(error);
+      }
+    }
     const interval = setInterval(loadWeather, 5000);
     loadWeather();
     return () => clearInterval(interval);
   }, [weather]);
 
-  async function loadWeather() {
-    try {
-      const response = await fetch(
-        `https://example-apis.vercel.app/api/weather/arctic`
-      );
-      const data = await response.json();
-      setWeather(data.isGoodWeather);
-      setEmoji(data.condition);
-      setTemp(data.temperature);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  
 
   return (
     <main className="mainSection">
