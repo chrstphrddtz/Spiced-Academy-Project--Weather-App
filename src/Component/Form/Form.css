@@ -41,7 +41,7 @@
   
 }
 
-button:hover {
+.formSection__formButton:hover {
     background-color: darkseagreen;
     color: var(--black-color);
     box-shadow: 2px 2px 6px;

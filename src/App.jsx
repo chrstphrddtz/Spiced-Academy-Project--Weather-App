@@ -21,7 +21,6 @@ function App() {
 
   function handleDeleteActivity(id) {
     setActivities(activities.filter((activity) => activity.id !== id))
-    console.log("delete: ", id);
   }
 
 

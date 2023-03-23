@@ -65,5 +65,11 @@
 }
 
 .listSection__listButton:hover {
+  margin: 10px;
+
   font-size: 1.8rem;
+  /* 
+  background-color: inherit;
+  border: none;
+  text-align: center; */
 }
